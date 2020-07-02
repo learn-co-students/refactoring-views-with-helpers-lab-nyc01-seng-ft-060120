@@ -375,3 +375,160 @@ Processing by ArtistsController#show as HTML
   Parameters: {"id"=>"2"}
   Rendered artists/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" ORDER BY "songs"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-07-02 13:11:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for ::1 at 2020-07-02 13:11:24 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered collection of songs/_song.html.erb [2 times] (3.2ms)
+  Rendered songs/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:9)
+
+NoMethodError - undefined method `artist' for nil:NilClass:
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/_song.html.erb:2:in `_app_views_songs__song_html_erb__695746578702278113_12540'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1822311509434171574_12520'
+
+Started POST "/__better_errors/0e6e3af44de271a1/variables" for ::1 at 2020-07-02 13:11:25 -0400
+Started GET "/songs" for ::1 at 2020-07-02 13:14:13 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered collection of songs/_song.html.erb [2 times] (2.0ms)
+  Rendered songs/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:9)
+
+NoMethodError - undefined method `artist' for nil:NilClass:
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/_song.html.erb:2:in `_app_views_songs__song_html_erb__695746578702278113_16040'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1822311509434171574_16000'
+
+Started POST "/__better_errors/da9d7e9489417a12/variables" for ::1 at 2020-07-02 13:14:13 -0400
+Started GET "/songs" for ::1 at 2020-07-02 13:14:29 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered collection of songs/_song.html.erb [2 times] (2.4ms)
+  Rendered songs/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:9)
+
+NoMethodError - undefined method `artist' for nil:NilClass:
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/_song.html.erb:2:in `_app_views_songs__song_html_erb__695746578702278113_19800'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1822311509434171574_19760'
+
+Started POST "/__better_errors/ed0fe7bf5cf1712e/variables" for ::1 at 2020-07-02 13:14:29 -0400
+Started GET "/songs" for ::1 at 2020-07-02 13:16:08 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered collection of songs/_song.html.erb [2 times] (2.0ms)
+  Rendered songs/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:9)
+
+NoMethodError - undefined method `artist' for nil:NilClass:
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/_song.html.erb:2:in `_app_views_songs__song_html_erb__695746578702278113_23580'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1822311509434171574_23540'
+
+Started POST "/__better_errors/a9cbac74aca78400/variables" for ::1 at 2020-07-02 13:16:08 -0400
+Started GET "/songs" for ::1 at 2020-07-02 13:23:56 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered collection of songs/_song.html.erb [2 times] (2.0ms)
+  Rendered songs/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:9)
+
+NoMethodError - undefined method `artist' for nil:NilClass:
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/_song.html.erb:2:in `_app_views_songs__song_html_erb__695746578702278113_27360'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1822311509434171574_27320'
+
+Started POST "/__better_errors/3989768eb6bd065c/variables" for ::1 at 2020-07-02 13:23:57 -0400
+Started GET "/songs/song" for ::1 at 2020-07-02 13:27:43 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"song"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song with 'id'=song:
+  app/controllers/songs_controller.rb:7:in `show'
+
+Started POST "/__better_errors/8a9cf410bd14191a/variables" for ::1 at 2020-07-02 13:27:43 -0400
+Started GET "/songs/song" for ::1 at 2020-07-02 13:35:02 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"song"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song with 'id'=song:
+  app/controllers/songs_controller.rb:7:in `show'
+
+Started POST "/__better_errors/7f6c8e37bc06a3d8/variables" for ::1 at 2020-07-02 13:35:02 -0400
+Started POST "/__better_errors/7f6c8e37bc06a3d8/variables" for ::1 at 2020-07-02 13:35:34 -0400
+Started POST "/__better_errors/7f6c8e37bc06a3d8/variables" for ::1 at 2020-07-02 13:35:40 -0400
+Started GET "/songs/1" for ::1 at 2020-07-02 13:37:29 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/_song.html.erb (22.5ms)
+  Rendered songs/show.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 158ms (Views: 156.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/songs/" for ::1 at 2020-07-02 13:37:44 -0400
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered collection of songs/_song.html.erb [2 times] (1.9ms)
+  Rendered songs/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/mayablevins/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/better_errors-2.7.1/lib/better_errors/raised_exception.rb:9)
+
+NoMethodError - undefined method `artist' for nil:NilClass:
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/_song.html.erb:2:in `_app_views_songs__song_html_erb__695746578702278113_31420'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1822311509434171574_31400'
+
+Started POST "/__better_errors/74664f5e883300f4/variables" for ::1 at 2020-07-02 13:37:44 -0400
